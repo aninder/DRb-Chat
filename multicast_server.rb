@@ -5,7 +5,7 @@ MULTICAST_ADDR = "224.0.0.1"
 BIND_ADDR = "0.0.0.0"
 PORT = 3000
 
-UDPSocket.open do
+UDPSocket.open do |socket|
 
 #join multicast group membership
   membership = IPAddr.new(MULTICAST_ADDR).hton + IPAddr.new(BIND_ADDR).hton
